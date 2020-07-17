@@ -22,7 +22,9 @@ function woodCalculator(chair, table, bed) {
 
 //Brick Calculator
 function brickCalculator(num) {
-    if (num <= 10) {
+    if (num < 0) {
+        return "You can not go under the ground.";
+    } else if (num <= 10) {
         var buildingHeight = 15 * num;
         var numberOfBricks = buildingHeight * 1000;
         return numberOfBricks;
@@ -55,3 +57,4 @@ function tinyFriend(arr) {
     }
     return tinyFriendName;
 }
+console.log(tinyFriend(["Fahim", "Sami", "Rahul", "po"]));
